@@ -72,7 +72,7 @@ class GAN():
             h = tf.nn.relu(tf.layers.batch_normalization(h))
 
             h = tf.layers.conv2d(h, 1, 4, strides=1, padding='VALID', kernel_regularizer=regularization)
-            h=tf.nn.sigmoid(tf.layers.batch_normalization(h))
+            h=tf.nn.sigmoid(h)
 			
 			print("discriminator")
             print(h.shape)
